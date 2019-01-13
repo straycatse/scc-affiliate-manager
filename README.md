@@ -1,0 +1,1 @@
+# scc-affiliate-manager
