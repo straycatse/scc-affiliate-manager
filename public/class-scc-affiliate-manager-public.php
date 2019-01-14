@@ -160,23 +160,26 @@ class Scc_Affiliate_Manager_Public {
 			//var_dump($items);
 
 			if ( is_array( $items ) || is_object( $items ) ) {
-				echo('<input id="myInput" type="text" onkeyup="sccSearch()" placeholder="Search for names..">');
 				echo('<table id="myTable">');
+				echo('<h4>' . $args['links-title'] . '</h4>');
+				echo('<input id="myInput" type="text" onkeyup="sccSearch()" placeholder="Sök...">');
 				echo('<thead>');
   				echo('<tr class="header">
-    				<th>Name</th>
-    				<th>Country</th>
-						<th>Country</th>
-						<th>Country</th>
+    				<th style="width: 20%;">Namn</th>
+    				<th style="width: 30%;">Beskrivning</th>
+						<th style="width: 20%;">Bonus</th>
+						<th style="width: 20%;">Taggar</th>
+						<th style="width: 25%;">Hemsida</th>
   				</tr>');
  				echo('</thead>');
-				echo('<h4>' . $args['links-title'] . '</h4><ul><tbody>');
+				echo('<ul><tbody>');
 				foreach ( $items as $item ) {
 					echo('<tr class="scc_entry">' .
 					'<td>' . $item->post_title . '</td>' .
 					'<td>' . $item->post_content . '</td>' .
 					'<td>' . $item->scc_bonus . '</td>' .
-					"<td> <a href='$item->scc_masked_link'><button>Till sajten</button></a>" . '</td>' .
+					'<td>' . $item->scc_tag . '</td>' .
+					"<td> <a href='$item->scc_masked_link'><button>Till sajten</button></a> <br> <a href='$item->scc_review'>Recension </td>" .
 					'</tr>');
 				} // foreach
 				echo ('</ul>');
