@@ -3,6 +3,8 @@
  * included in this file.
  */
 
+@import "bootstrap.css";
+
  #myTable {
    border-collapse: collapse
  }
@@ -16,7 +18,7 @@
  }
 
  .scc_entry {
-   height: 75px;
+   height: 100px;
  }
 
  .scc_entry:nth-child(even){

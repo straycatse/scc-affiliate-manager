@@ -165,11 +165,11 @@ class Scc_Affiliate_Manager_Public {
 				echo('<input id="myInput" type="text" onkeyup="sccSearch()" placeholder="Sök...">');
 				echo('<thead>');
   				echo('<tr class="header">
-    				<th style="width: 20%;">Namn</th>
+    				<th style="width: 15%;">Namn</th>
     				<th style="width: 30%;">Beskrivning</th>
 						<th style="width: 20%;">Bonus</th>
 						<th style="width: 20%;">Taggar</th>
-						<th style="width: 25%;">Hemsida</th>
+						<th style="width: 15%;">Hemsida</th>
   				</tr>');
  				echo('</thead>');
 				echo('<ul><tbody>');
@@ -179,7 +179,7 @@ class Scc_Affiliate_Manager_Public {
 					'<td>' . $item->post_content . '</td>' .
 					'<td>' . $item->scc_bonus . '</td>' .
 					'<td>' . $item->scc_tag . '</td>' .
-					"<td> <a href='$item->scc_masked_link'><button>Till sajten</button></a> <br> <a href='$item->scc_review'>Recension </td>" .
+					"<td> <a href='$item->scc_masked_link'><button type='button' class='btn btn-primary'>Till sajten</button></a> <br> <a href='$item->scc_review'>Recension </td>" .
 					'</tr>');
 				} // foreach
 				echo ('</ul>');
