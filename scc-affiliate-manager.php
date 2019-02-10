@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Affiliate Manager
  * Plugin URI:        https://straycat.nu/affiliate-manager
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       This plugin makes it easy to add, manage and display your affiliate links in a neat and organized way.
  * Version:           1.0.0
  * Author:            Stray Cat Communication
  * Author URI:        https://straycat.nu
