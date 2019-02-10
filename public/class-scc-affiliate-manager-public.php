@@ -160,22 +160,23 @@ class Scc_Affiliate_Manager_Public {
 			//var_dump($items);
 
 			if ( is_array( $items ) || is_object( $items ) ) {
-				echo('<table id="myTable">');
+				echo('<div class="table-responsive">');
+				echo('<table class="table" id="myTable">');
 				echo('<h4>' . $args['links-title'] . '</h4>');
 				echo('<input id="myInput" type="text" onkeyup="sccSearch()" placeholder="Sök...">');
 				echo('<thead>');
   				echo('<tr class="header">
-    				<th style="width: 15%;">Namn</th>
-    				<th style="width: 30%;">Beskrivning</th>
-						<th style="width: 20%;">Bonus</th>
-						<th style="width: 20%;">Taggar</th>
-						<th style="width: 15%;">Hemsida</th>
+    				<th scope="col" style="width: 15%;">Namn</th>
+    				<th scope="col" style="width: 30%;">Beskrivning</th>
+						<th scope="col" style="width: 20%;">Bonus</th>
+						<th scope="col" style="width: 20%;">Taggar</th>
+						<th scope="col" style="width: 15%;">Hemsida</th>
   				</tr>');
  				echo('</thead>');
 				echo('<ul><tbody>');
 				foreach ( $items as $item ) {
 					echo('<tr class="scc_entry">' .
-					'<td>' . $item->post_title . '</td>' .
+					'<td>' . $item->post_title . '</th>' .
 					'<td>' . $item->post_content . '</td>' .
 					'<td>' . $item->scc_bonus . '</td>' .
 					'<td>' . $item->scc_tag . '</td>' .
@@ -185,6 +186,7 @@ class Scc_Affiliate_Manager_Public {
 				echo ('</ul>');
 				echo ('</tbody>');
 				echo('</table>');
+				echo('</div>');
 			} else {
 				echo $items;
 			}

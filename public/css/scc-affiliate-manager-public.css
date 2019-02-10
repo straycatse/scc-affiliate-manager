@@ -13,6 +13,11 @@
   border: none;
 }
 
+.btn-primary {
+  background-color: #4daaf2;
+  border-color: #4daaf2;
+  border-radius: 15px;
+}
  .scc_entry td{
    border: none;
  }
@@ -22,10 +27,12 @@
  }
 
  .scc_entry:nth-child(even){
-   background: #eee;
+   background: #4daaf2;
+   color: #ffffff;
  }
- .scc_eventry:nth-child(odd){
+ .scc_entry:nth-child(odd){
    background: #777;
+   color: #4daaf2;
  }
 
  #myInput {
