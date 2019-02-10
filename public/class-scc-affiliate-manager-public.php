@@ -151,7 +151,7 @@ class Scc_Affiliate_Manager_Public {
 			ob_start();
 
 			$args = shortcode_atts( array(
-				'num-links' => 5,
+				'num-links' => 100,
 				'links-title' => 'Partners',),
 				$atts
 			);
@@ -162,7 +162,7 @@ class Scc_Affiliate_Manager_Public {
 			if ( is_array( $items ) || is_object( $items ) ) {
 				echo('<div class="table-responsive">');
 				echo('<table class="table" id="myTable">');
-				echo('<h4>' . $args['links-title'] . '</h4>');
+				echo('<h4 class="table-h4">' . $args['links-title'] . '</h4>');
 				echo('<input id="myInput" type="text" onkeyup="sccSearch()" placeholder="Sök...">');
 				echo('<thead>');
   				echo('<tr class="header">

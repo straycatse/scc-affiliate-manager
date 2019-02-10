@@ -6,11 +6,20 @@
 @import "bootstrap.css";
 
  #myTable {
-   border-collapse: collapse
+   border-collapse: collapse;
+   border: none !important;
  }
 
 .header th {
   border: none;
+}
+
+.table-h4 {
+  color: #fff;
+}
+
+.header th {
+  color: #fff !important;
 }
 
 .btn-primary {
@@ -20,6 +29,7 @@
 }
  .scc_entry td{
    border: none;
+   vertical-align: middle;
  }
 
  .scc_entry {
@@ -31,7 +41,7 @@
    color: #ffffff;
  }
  .scc_entry:nth-child(odd){
-   background: #777;
+   background: #fafafa;
    color: #4daaf2;
  }
 
