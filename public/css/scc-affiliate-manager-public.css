@@ -45,6 +45,11 @@
    color: #4daaf2;
  }
 
+.scc_entry:nth-child(odd) button {
+  background: #fff;
+  color: #4daaf2;
+}
+
  #myInput {
    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
    background-position: 10px 12px; /* Position the search icon */
