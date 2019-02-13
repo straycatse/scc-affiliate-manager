@@ -25,7 +25,7 @@
 .btn-primary {
   background-color: #4daaf2;
   border-color: #4daaf2;
-  border-radius: 15px;
+  border-radius: 10px;
 }
  .scc_entry td{
    border: none;
@@ -33,7 +33,12 @@
  }
 
  .scc_entry {
-   height: 100px;
+   height: 120px;
+ }
+
+ .scc_entry a {
+   text-align: center;
+   margin: auto;
  }
 
  .scc_entry:nth-child(even){
@@ -45,10 +50,25 @@
    color: #4daaf2;
  }
 
-.scc_entry:nth-child(odd) button {
-  background: #fff;
+.scc_entry:nth-child(even) button {
+  background: #fafafa;
   color: #4daaf2;
+  border-color: #fafafa;
 }
+
+.scc_entry:nth-child(even) button:hover {
+  background: #dadada;
+  border-color: #dadada;
+}
+
+.scc_entry:nth-child(even) a {
+  color: #fff;
+}
+
+.scc_entry:nth-child(even) a:hover {
+  color: #dadada;
+}
+
 
  #myInput {
    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
