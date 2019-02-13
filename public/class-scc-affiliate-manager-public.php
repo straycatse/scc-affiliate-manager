@@ -136,7 +136,7 @@ class Scc_Affiliate_Manager_Public {
 		*/
 
 		public function register_shortcodes() {
-			add_shortcode( 'randomlink', array( $this, 'list_links' ) );
+			add_shortcode( 'aff_list', array( $this, 'list_links' ) );
 		} // register_shortcodes()
 
 		/**
@@ -167,9 +167,9 @@ class Scc_Affiliate_Manager_Public {
 				echo('<input id="myInput" type="text" onkeyup="sccSearch()" placeholder="Sök...">');
 				echo('<thead>');
   				echo('<tr class="header">
-    				<th scope="col" style="width: 15%;"><a href="?orderBy=name">Namn</a></th>
-    				<th scope="col" style="width: 30%;"><a href="?orderBy=desc">Beskrivning</a></th>
-						<th scope="col" style="width: 20%;"><a href="?orderBy=bonus">Bonus</a></th>
+    				<th scope="col" style="width: 15%;">Namn</th>
+    				<th scope="col" style="width: 30%;">Beskrivning</th>
+						<th scope="col" style="width: 20%;">Bonus</th>
 						<th scope="col" style="width: 20%;">Taggar</th>
 						<th scope="col" style="width: 15%;">Hemsida</th>
   				</tr>');
