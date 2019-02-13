@@ -114,7 +114,8 @@ class Scc_Affiliate_Manager_Public {
 		$args = array(
 			'post_type' => 'aff-link',
 			'posts_per_page' => $params,
-			'orderby' => 'desc'
+			'order' => 'asc',
+			'orderby' => 'name'
 		);
 
 		$query = new WP_Query( $args );
@@ -151,7 +152,7 @@ class Scc_Affiliate_Manager_Public {
 			ob_start();
 
 			$args = shortcode_atts( array(
-				'num-links' => 100,
+				'num-links' => 20,
 				'links-title' => 'Partners',),
 				$atts
 			);
@@ -166,9 +167,9 @@ class Scc_Affiliate_Manager_Public {
 				echo('<input id="myInput" type="text" onkeyup="sccSearch()" placeholder="Sök...">');
 				echo('<thead>');
   				echo('<tr class="header">
-    				<th scope="col" style="width: 15%;">Namn</th>
-    				<th scope="col" style="width: 30%;">Beskrivning</th>
-						<th scope="col" style="width: 20%;">Bonus</th>
+    				<th scope="col" style="width: 15%;"><a href="?orderBy=name">Namn</a></th>
+    				<th scope="col" style="width: 30%;"><a href="?orderBy=desc">Beskrivning</a></th>
+						<th scope="col" style="width: 20%;"><a href="?orderBy=bonus">Bonus</a></th>
 						<th scope="col" style="width: 20%;">Taggar</th>
 						<th scope="col" style="width: 15%;">Hemsida</th>
   				</tr>');
