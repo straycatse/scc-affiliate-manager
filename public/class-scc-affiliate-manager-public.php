@@ -152,7 +152,7 @@ class Scc_Affiliate_Manager_Public {
 			ob_start();
 
 			$args = shortcode_atts( array(
-				'num-links' => 20,
+				'num-links' => 5,
 				'links-title' => 'Partners',),
 				$atts
 			);
@@ -161,33 +161,54 @@ class Scc_Affiliate_Manager_Public {
 			//var_dump($items);
 
 			if ( is_array( $items ) || is_object( $items ) ) {
-				echo('<div class="table-responsive">');
-				echo('<table class="table" id="myTable">');
 				echo('<h4 class="table-h4">' . $args['links-title'] . '</h4>');
 				echo('<input id="myInput" type="text" onkeyup="sccSearch()" placeholder="Sök...">');
-				echo('<thead>');
-  				echo('<tr class="header">
-    				<th scope="col" style="width: 15%;">Namn</th>
-    				<th scope="col" style="width: 30%;">Beskrivning</th>
-						<th scope="col" style="width: 20%;">Bonus</th>
-						<th scope="col" style="width: 20%;">Taggar</th>
-						<th scope="col" style="width: 15%;">Hemsida</th>
-  				</tr>');
- 				echo('</thead>');
-				echo('<ul><tbody>');
+				echo('<div id="myTable" class="scc_container">');
+				echo('<ul class="scc_entry">');
+					echo('<li class="scc_head">Namn</li>');
+					echo('<li class="scc_head">Beskrivning</li>');
+					echo('<li class="scc_head">Bonus</li>');
+					echo('<li class="scc_head">Hemsida</li>');
+				echo('</ul>');
 				foreach ( $items as $item ) {
-					echo('<tr class="scc_entry">' .
-					'<td>' . $item->post_title . '</th>' .
-					'<td>' . $item->post_content . '</td>' .
-					'<td>' . $item->scc_bonus . '</td>' .
-					'<td>' . $item->scc_tag . '</td>' .
-					"<td> <a href='$item->scc_masked_link'><button type='button' class='btn btn-primary'>Till sajten</button></a> <br> <a href='$item->scc_review'>Recension </td>" .
-					'</tr>');
+					echo('<ul class="scc_entry">');
+						echo('<li class="scc_item">' . $item->post_title . '</li>');
+						echo('<li class="scc_item">' . $item->post_content . '<p class="scc_read_more"><i><a href=' . $item->scc_company_website . '>Läs mer om företaget</a></i></p>' . '</li>');
+						echo('<li class="scc_item">' . $item->scc_bonus . '</li>');
+						// echo('<li class="scc_item">' . $item->scc_tag . '</li>');
+						echo("<li class='scc_item'> <a href='$item->scc_masked_link'><button type='button' class='btn btn-primary'>Till sajten</button></a><a href='$item->scc_review'>Recension</a> </li>");
+					echo('</ul>');
 				} // foreach
-				echo ('</ul>');
-				echo ('</tbody>');
-				echo('</table>');
 				echo('</div>');
+
+
+				// echo('<div class="table-responsive">');
+				// echo('<table class="table" id="myTable">');
+				// echo('<h4 class="table-h4">' . $args['links-title'] . '</h4>');
+				// echo('<input id="myInput" type="text" onkeyup="sccSearch()" placeholder="Sök...">');
+				// echo('<thead>');
+  			// 	echo('<tr class="header">
+    		// 		<th scope="col" style="width: 15%;">Namn</th>
+    		// 		<th scope="col" style="width: 30%;">Beskrivning</th>
+				// 		<th scope="col" style="width: 20%;">Bonus</th>
+				// 		<th scope="col" style="width: 20%;">Taggar</th>
+				// 		<th scope="col" style="width: 15%;">Hemsida</th>
+  			// 	</tr>');
+ 				// echo('</thead>');
+				// echo('<ul><tbody>');
+				// foreach ( $items as $item ) {
+				// 	echo('<tr class="scc_entry">' .
+				// 	'<td>' . $item->post_title . '</th>' .
+				// 	'<td>' . $item->post_content . '</td>' .
+				// 	'<td>' . $item->scc_bonus . '</td>' .
+				// 	'<td>' . $item->scc_tag . '</td>' .
+				// 	"<td> <a href='$item->scc_masked_link'><button type='button' class='btn btn-primary'>Till sajten</button></a> <br> <a href='$item->scc_review'>Recension </td>" .
+				// 	'</tr>');
+				// } // foreach
+				// echo ('</ul>');
+				// echo ('</tbody>');
+				// echo('</table>');
+				// echo('</div>');
 			} else {
 				echo $items;
 			}

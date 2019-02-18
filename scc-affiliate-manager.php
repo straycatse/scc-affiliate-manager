@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              https://straycat.nu
- * @since             1.0.0
+ * @since             2.0.0
  * @package           Scc_Affiliate_Manager
  *
  * @wordpress-plugin
  * Plugin Name:       Affiliate Manager
  * Plugin URI:        https://straycat.nu/affiliate-manager
  * Description:       This plugin makes it easy to add, manage and display your affiliate links in a neat and organized way.
- * Version:           1.0.0
+ * Version:           2.0.0
  * Author:            Stray Cat Communication
  * Author URI:        https://straycat.nu
  * License:           GPL-2.0+

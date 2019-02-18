@@ -27,18 +27,62 @@
   border-color: #4daaf2;
   border-radius: 10px;
 }
+
+.scc_container {
+}
+
  .scc_entry td{
    border: none;
    vertical-align: middle;
  }
 
- .scc_entry {
-   height: 120px;
+.scc_entry {
+   padding: 0;
+   margin: 0;
+   list-style: none !important;
+   list-style-type: none !important;
+   display: -webkit-box;
+   display: -moz-box;
+   display: -ms-flexbox;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row wrap;
+   justify-content: space-around;
+}
+
+.scc_item {
+   padding: 5px;
+   width: 200px;
+   height: 150px;
+   margin-top: 10px;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+   vertical-align: middle !important;
+   list-style-type: none !important;
  }
+
+ .scc_head {
+   font-weight: bold;
+   padding: 5px;
+   width: 200px;
+   height: 50px;
+   margin-top: 10px;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+   vertical-align: middle !important;
+ }
+
 
  .scc_entry a {
    text-align: center;
-   margin: auto;
+ }
+
+ .scc_read_more {
+   margin-top: 5px;
  }
 
  .scc_entry:nth-child(even){
