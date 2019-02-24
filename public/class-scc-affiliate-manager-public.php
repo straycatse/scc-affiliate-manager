@@ -172,7 +172,7 @@ class Scc_Affiliate_Manager_Public {
 				echo('</ul>');
 				foreach ( $items as $item ) {
 					echo('<ul class="scc_entry">');
-						echo('<li class="scc_item">' . $item->post_title . '</li>');
+						echo('<li class="scc_item">' . $item->post_title . '<img src=' . $item->scc_affiliate_logo . '></img></li>');
 						echo('<li class="scc_item">' . $item->post_content . '<p class="scc_read_more"><i><a href=' . $item->scc_company_website . '>Läs mer om företaget</a></i></p>' . '</li>');
 						echo('<li class="scc_item">' . $item->scc_bonus . '</li>');
 						// echo('<li class="scc_item">' . $item->scc_tag . '</li>');
