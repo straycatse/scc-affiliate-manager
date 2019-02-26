@@ -53,7 +53,8 @@
 .scc_item {
    padding: 5px;
    width: 200px;
-   height: 165px;
+   height: auto;
+   min-height: 165px;
    margin-top: 10px;
    display: flex;
    justify-content: center;
@@ -113,6 +114,15 @@
   color: #dadada;
 }
 
+
+@media only screen and (max-width: 768px) {
+  .scc_head {
+    display: none;
+  }
+  .scc_item {
+    min-height: 75px !important;
+  }
+}
 
  #myInput {
    background-image: url('/css/searchicon.png'); /* Add a search icon to input */

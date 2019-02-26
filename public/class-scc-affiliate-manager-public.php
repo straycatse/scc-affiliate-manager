@@ -171,8 +171,20 @@ class Scc_Affiliate_Manager_Public {
 					echo('<li class="scc_head">Hemsida</li>');
 				echo('</ul>');
 				foreach ( $items as $item ) {
+
 					echo('<ul class="scc_entry">');
-						echo('<li class="scc_item">' . $item->post_title . '<img src=' . $item->scc_affiliate_logo . '></img></li>');
+						// $scc_img = get_field("$item->scc_affiliate_logo['url']");
+						// echo('<img src=' . $scc_img . '>');
+						$image = $item->scc_affiliate_logo;
+						$size = 'full'; // (thumbnail, medium, large, full or custom size)
+						if( $image ) {
+							echo('<li class="scc_item">');
+							echo wp_get_attachment_image( $image, $size );
+						}
+						else {
+							echo('<li class="scc_item">' . $item->post_title);
+						}
+						echo('</li>');
 						echo('<li class="scc_item">' . $item->post_content . '<p class="scc_read_more"><i><a href=' . $item->scc_company_website . '>Läs mer om företaget</a></i></p>' . '</li>');
 						echo('<li class="scc_item">' . $item->scc_bonus . '</li>');
 						// echo('<li class="scc_item">' . $item->scc_tag . '</li>');
