@@ -9,7 +9,7 @@
  * that starts the plugin.
  *
  * @link              https://straycat.nu
- * @since             2.0.0
+ * @since             2.1.0
  * @package           Scc_Affiliate_Manager
  *
  * @wordpress-plugin
