@@ -179,7 +179,9 @@ class Scc_Affiliate_Manager_Public {
 						$size = 'full'; // (thumbnail, medium, large, full or custom size)
 						if( $image ) {
 							echo('<li class="scc_item">');
+							echo('<div class="logo-img">');
 							echo wp_get_attachment_image( $image, $size );
+							echo('</div>');
 						}
 						else {
 							echo('<li class="scc_item">' . $item->post_title);

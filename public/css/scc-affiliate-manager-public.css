@@ -134,3 +134,9 @@
    border: 1px solid #ddd; /* Add a grey border */
    margin-bottom: 12px; /* Add some space below the input */
  }
+
+.logo-img {
+  width: 200px;
+  max-height: 140px;
+  padding: 10px;
+}
