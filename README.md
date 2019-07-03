@@ -1,1 +1,1 @@
-# scc-affiliate-manager
+# SCC Affiliate Manager
